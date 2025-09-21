@@ -1,0 +1,150 @@
+/* Pengaturan Dasar */
+body {
+    background-color: #F5F5DC; /* Warna krem lembut */
+    font-family: 'Lato', sans-serif;
+    color: #4a4a4a; /* Abu-abu gelap */
+    line-height: 1.8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Judul dan Header */
+h1, h2, h3, .love-declaration {
+    font-family: 'Dancing Script', cursive;
+    color: #d18a8a; /* Merah muda lembut */
+}
+
+.hero {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.hero .subtitle {
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Bagian Konten */
+.content-section {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s forwards;
+    animation-delay: 1s; /* Muncul setelah fade in utama */
+}
+
+/* Animasi Slide Up untuk setiap bagian */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section:nth-of-type(2) { animation-delay: 1.2s; }
+.content-section:nth-of-type(3) { animation-delay: 1.4s; }
+.content-section:nth-of-type(4) { animation-delay: 1.6s; }
+.content-section:nth-of-type(5) { animation-delay: 1.8s; }
+
+
+.content-section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reasons .reason-item {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #d18a8a;
+}
+
+.reasons h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+/* Galeri Foto */
+.gallery .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+/* Pesan Utama dan Penutup */
+.message {
+    text-align: center;
+}
+
+.love-declaration {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    color: #777;
+}
+
+.signature {
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.your-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #4a4a4a;
+    margin-top: 10px;
+}
