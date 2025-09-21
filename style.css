@@ -4,23 +4,32 @@ body {
     font-family: 'Lato', sans-serif;
     color: #4a4a4a; /* Abu-abu gelap */
     line-height: 1.8;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px 0;
+    margin: 0; /* Penting agar tidak ada spasi putih aneh */
+    padding: 0; /* Dihapus dari sini agar tidak mengganggu layout sticky */
 }
 
+/* Style untuk Bar Musik yang Menempel di Atas */
+.music-player-bar {
+    position: sticky; /* Kunci agar menempel */
+    top: 0; /* Menempel di bagian paling atas */
+    background-color: #F5F5DC;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000; /* Memastikan bar ini selalu di atas elemen lain */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container utama untuk konten */
 .container {
     max-width: 800px;
     width: 90%;
+    margin: 40px auto; /* Memberi jarak dari atas dan bawah, dan menengahkan */
     background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     opacity: 0;
-    animation: fadeIn 2s forwards;
+    animation: fadeIn 1.5s forwards;
 }
 
 /* Animasi Fade In */
@@ -60,10 +69,9 @@ h1, h2, h3, .love-declaration {
     opacity: 0;
     transform: translateY(20px);
     animation: slideUp 1s forwards;
-    animation-delay: 1s; /* Muncul setelah fade in utama */
+    animation-delay: 1s;
 }
 
-/* Animasi Slide Up untuk setiap bagian */
 @keyframes slideUp {
     to {
         opacity: 1;
@@ -75,7 +83,6 @@ h1, h2, h3, .love-declaration {
 .content-section:nth-of-type(3) { animation-delay: 1.4s; }
 .content-section:nth-of-type(4) { animation-delay: 1.6s; }
 .content-section:nth-of-type(5) { animation-delay: 1.8s; }
-
 
 .content-section h2 {
     font-size: 2.5em;
@@ -95,28 +102,6 @@ h1, h2, h3, .love-declaration {
     margin-top: 0;
     font-size: 1.8em;
 }
-
-/* Galeri Foto */
-.gallery .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
 
 /* Pesan Utama dan Penutup */
 .message {
@@ -149,12 +134,12 @@ h1, h2, h3, .love-declaration {
     margin-top: 10px;
 }
 
-/* Style untuk Tombol Pilihan (VERSI AWAL YANG SEDERHANA) */
+/* Style untuk Tombol Pilihan */
 .choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Jarak antar tombol */
+    gap: 20px;
     margin-top: 40px;
     padding: 20px;
     height: 100px;
@@ -198,15 +183,4 @@ h1, h2, h3, .love-declaration {
 .calm-heading {
     font-size: 3em;
     color: #888; /* Warna abu-abu yang tenang */
-}
-
-/* Style untuk Bar Musik yang Menempel di Atas */
-.music-player-bar {
-  position: sticky; /* Ini kuncinya agar menempel */
-  top: 0; /* Menempel di bagian paling atas */
-  background-color: #F5F5DC; /* Warna latar agar konten di bawah tidak tembus */
-  padding: 15px;
-  text-align: center;
-  z-index: 1000; /* Memastikan bar ini selalu di atas elemen lain */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus agar terlihat terpisah */
 }
