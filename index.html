@@ -41,21 +41,53 @@
                 <p>Di dekatmu, aku merasa bisa menjadi diriku sendiri. Semua terasa tenang dan benar.</p>
             </div>
         </section>
+        
+        <section class="content-section gallery">
+            <h2>Galeri Kenangan Kita</h2>
+            <div class="image-grid">
+                <img src="foto1.jpg" alt="Kenangan pertama">
+                <img src="foto2.jpg" alt="Momen spesial">
+                <img src="foto3.jpg" alt="Senyum favoritku">
+            </div>
+        </section>
 
         <section class="content-section message">
             <h2>Apa yang Ingin Aku Sampaikan...</h2>
             <p>Nazwa, seiring berjalannya waktu, aku sadar perasaanku lebih dari sekadar kagum. Aku menemukan kebahagiaan dalam setiap momen kecil yang kita bagi, dan aku menemukan diriku berharap untuk bisa menciptakan lebih banyak kenangan bersamamu. </p>
             <p class="love-declaration">Aku menyayangimu, dan aku mencintaimu.</p>
-            <p>Lebih dari yang bisa diungkapkan oleh website sederhana ini.</p>
+            <p>Jadi, maukah kamu memberiku kesempatan?</p>
         </section>
 
-        <footer class="footer">
+        <section class="content-section choices">
+            <a href="diterima.html" class="button yes-button">Tentu Saja, Aku Mau! 😊</a>
+            <a href="ditolak.html" id="no-button" class="button no-button">Maaf, sepertinya tidak...</a>
+        </section>
+
+	<footer class="footer">
             <p>Apapun jawabanmu nanti, terima kasih telah menjadi bagian penting dalam perjalananku. Kamu adalah seseorang yang luar biasa.</p>
             <p class="signature">Dari seseorang yang tulus mengagumimu,</p>
             <p class="your-name">... (Sultan Ali Shiddiq) ...</p>
         </footer>
-
     </div>
+
+<script>
+    const noButton = document.getElementById('no-button');
+
+    noButton.addEventListener('mouseover', () => {
+        // Dapatkan ukuran layar browser
+        const maxWidth = window.innerWidth - noButton.clientWidth;
+        const maxHeight = window.innerHeight - noButton.clientHeight;
+
+        // Buat posisi acak di seluruh layar
+        const randomX = Math.floor(Math.random() * maxWidth);
+        const randomY = Math.floor(Math.random() * maxHeight);
+
+        // Atur posisi tombol menjadi absolut dan pindahkan
+        noButton.style.position = 'absolute';
+        noButton.style.left = randomX + 'px';
+        noButton.style.top = randomY + 'px';
+    });
+</script>
 
 </body>
 </html>
