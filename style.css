@@ -148,3 +148,54 @@ h1, h2, h3, .love-declaration {
     color: #4a4a4a;
     margin-top: 10px;
 }
+
+/* Style untuk Tombol Pilihan (VERSI AWAL YANG SEDERHANA) */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Jarak antar tombol */
+    margin-top: 40px;
+    padding: 20px;
+    height: 100px;
+}
+
+.button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.yes-button {
+    background-color: #4CAF50; /* Hijau */
+}
+
+.yes-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.no-button {
+    background-color: #f44336; /* Merah */
+}
+
+/* Style untuk halaman hasil (diterima) */
+.result-page {
+    text-align: center;
+}
+
+.result-page .yay {
+    font-size: 4em;
+    color: #ff69b4; /* Hot pink */
+}
+
+.calm-heading {
+    font-size: 3em;
+    color: #888; /* Warna abu-abu yang tenang */
+}
