@@ -9,7 +9,7 @@ body {
     padding: 0;
 
     /* --- Pengaturan Latar Belakang Bunga Matahari --- */
-    background-image: url('https://i.pinimg.com/1200x/3b/23/47/3b234796b2e18c468ce1acee3f9c554f.jpg'); 
+    background-image: url('https://i.pinimg.com/1200x/e2/97/75/e297759c97a7aad9b37d96efb5c4f5bd.jpg'); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -215,4 +215,5 @@ h1, h2, h3, .love-declaration {
     font-family: 'Great Vibes', cursive;
     font-size: 4.8em; /* Ukurannya mungkin perlu sedikit disesuaikan */
 }
+
 
