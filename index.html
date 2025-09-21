@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body>
-
 	<body>
     <audio id="lagu-cinta" loop src="musik.mp3"></audio>
 
@@ -18,32 +16,6 @@
         <button id="tombol-musik" class="button yes-button">🎵 Putar Musik Pengiring</button>
     </div>
 
-
-    <div class="container">
-        ```
-
-#### ### 3. Tambahkan Sedikit JavaScript
-Letakkan blok `<script>` ini di bagian **paling bawah** file **`index.html`** Anda, tepat sebelum tag penutup `</body>`.
-
-```html
-    <script>
-        const lagu = document.getElementById('lagu-cinta');
-        const tombolMusik = document.getElementById('tombol-musik');
-
-        tombolMusik.addEventListener('click', () => {
-            // Cek apakah musik sedang diputar atau dijeda
-            if (lagu.paused) {
-                lagu.play();
-                tombolMusik.textContent = '⏸️ Jeda Musik';
-            } else {
-                lagu.pause();
-                tombolMusik.textContent = '🎵 Putar Musik Pengiring';
-            }
-        });
-    </script>
-
-</body>
-</html>
     <div class="container">
         <header class="hero">
             <h1>Untuk Nazwa Alya Maharani</h1>
@@ -114,8 +86,28 @@ Letakkan blok `<script>` ini di bagian **paling bawah** file **`index.html`** An
     });
 </script>
 
+		```html
+    <script>
+        const lagu = document.getElementById('lagu-cinta');
+        const tombolMusik = document.getElementById('tombol-musik');
+
+        tombolMusik.addEventListener('click', () => {
+            // Cek apakah musik sedang diputar atau dijeda
+            if (lagu.paused) {
+                lagu.play();
+                tombolMusik.textContent = '⏸️ Jeda Musik';
+            } else {
+                lagu.pause();
+                tombolMusik.textContent = '🎵 Putar Musik Pengiring';
+            }
+        });
+    </script>
+
 </body>
 </html>
+</body>
+</html>
+
 
 
 
