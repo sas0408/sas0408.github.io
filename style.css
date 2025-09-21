@@ -184,3 +184,9 @@ h1, h2, h3, .love-declaration {
     font-size: 3em;
     color: #888; /* Warna abu-abu yang tenang */
 }
+
+/* Font Khusus untuk Nama Nazwa */
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.8em; /* Ukurannya mungkin perlu sedikit disesuaikan */
+}
