@@ -9,12 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
-	<body>
+<body>
+
     <audio id="lagu-cinta" loop src="musik.mp3"></audio>
 
     <div style="text-align: center; padding: 20px;">
         <button id="tombol-musik" class="button yes-button">🎵 Putar Musik Pengiring</button>
     </div>
+
 
     <div class="container">
         <header class="hero">
@@ -47,7 +49,6 @@
             </div>
         </section>
         
-
         <section class="content-section message">
             <h2>Apa yang Ingin Aku Sampaikan...</h2>
             <p>Nazwa, seiring berjalannya waktu, aku sadar perasaanku lebih dari sekadar kagum. Aku menemukan kebahagiaan dalam setiap momen kecil yang kita bagi, dan aku menemukan diriku berharap untuk bisa menciptakan lebih banyak kenangan bersamamu. </p>
@@ -60,54 +61,43 @@
             <a href="ditolak.html" id="no-button" class="button no-button">Maaf, sepertinya tidak...</a>
         </section>
 
-	<footer class="footer">
+        <footer class="footer">
             <p>Apapun jawabanmu nanti, terima kasih telah menjadi bagian penting dalam perjalananku. Kamu adalah seseorang yang luar biasa.</p>
             <p class="signature">Dari seseorang yang tulus mengagumimu,</p>
-            <p class="your-name">... (Sultan Ali Shiddiq) ...</p>
+            <p class="your-name">(Sultan Ali Shiddiq)</p>
         </footer>
     </div>
 
-<script>
-    const noButton = document.getElementById('no-button');
 
-    noButton.addEventListener('mouseover', () => {
-        // Dapatkan ukuran layar browser
-        const maxWidth = window.innerWidth - noButton.clientWidth;
-        const maxHeight = window.innerHeight - noButton.clientHeight;
-
-        // Buat posisi acak di seluruh layar
-        const randomX = Math.floor(Math.random() * maxWidth);
-        const randomY = Math.floor(Math.random() * maxHeight);
-
-        // Atur posisi tombol menjadi absolut dan pindahkan
-        noButton.style.position = 'absolute';
-        noButton.style.left = randomX + 'px';
-        noButton.style.top = randomY + 'px';
-    });
-</script>
-
-		```html
     <script>
+        // --- Skrip untuk Tombol "Tidak" yang Bergerak ---
+        const noButton = document.getElementById('no-button');
+
+        noButton.addEventListener('mouseover', () => {
+            const maxWidth = window.innerWidth - noButton.clientWidth;
+            const maxHeight = window.innerHeight - noButton.clientHeight;
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        });
+
+        
+        // --- Skrip untuk Tombol Musik ---
         const lagu = document.getElementById('lagu-cinta');
         const tombolMusik = document.getElementById('tombol-musik');
 
         tombolMusik.addEventListener('click', () => {
-            // Cek apakah musik sedang diputar atau dijeda
             if (lagu.paused) {
                 lagu.play();
-                tombolMusik.textContent = '⏸️ Jeda Musik';
+                tombolMusik.innerHTML = '⏸️ Jeda Musik';
             } else {
                 lagu.pause();
-                tombolMusik.textContent = '🎵 Putar Musik Pengiring';
+                tombolMusik.innerHTML = '🎵 Putar Musik Pengiring';
             }
         });
     </script>
 
 </body>
 </html>
-</body>
-</html>
-
-
-
-
