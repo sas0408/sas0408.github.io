@@ -1,11 +1,36 @@
 /* Pengaturan Dasar */
+/* Pengaturan Dasar */
 body {
-    background-color: #F5F5DC; /* Warna krem lembut */
+    background-color: #F5F5DC; /* Warna krem lembut (sebagai cadangan jika gambar tidak termuat) */
     font-family: 'Lato', sans-serif;
     color: #4a4a4a; /* Abu-abu gelap */
     line-height: 1.8;
-    margin: 0; /* Penting agar tidak ada spasi putih aneh */
-    padding: 0; /* Dihapus dari sini agar tidak mengganggu layout sticky */
+    margin: 0;
+    padding: 0;
+
+    /* --- Pengaturan Latar Belakang Bunga Matahari --- */
+    background-image: url('https://i.pinimg.com/1200x/3b/23/47/3b234796b2e18c468ce1acee3f9c554f.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    /* Memberi efek overlay untuk membuat teks lebih mudah dibaca */
+    /* Kita akan tambahkan pseudo-element untuk ini */
+    position: relative; /* Penting untuk pseudo-element overlay */
+    min-height: 100vh; /* Agar latar belakang mengisi seluruh layar */
+}
+
+/* OVERLAY untuk membuat teks lebih mudah dibaca */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* Putih transparan 40% */
+    z-index: -1; /* Posisikan di bawah konten, di atas gambar */
 }
 
 /* Style untuk Bar Musik yang Menempel di Atas */
@@ -190,3 +215,4 @@ h1, h2, h3, .love-declaration {
     font-family: 'Great Vibes', cursive;
     font-size: 4.8em; /* Ukurannya mungkin perlu sedikit disesuaikan */
 }
+
