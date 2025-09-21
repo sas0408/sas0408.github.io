@@ -199,3 +199,35 @@ h1, h2, h3, .love-declaration {
     font-size: 3em;
     color: #888; /* Warna abu-abu yang tenang */
 }
+
+/* Style untuk Tombol Musik Melayang */
+.music-button {
+  /* Posisi Tetap (Melayang) */
+  position: fixed;
+  left: 20px; /* Jarak dari kiri */
+  top: 50%; /* Posisi di tengah secara vertikal */
+  transform: translateY(-50%); /* Penyesuaian agar pas di tengah */
+  z-index: 1000; /* Memastikan tombol selalu di atas konten lain */
+
+  /* Tampilan Tombol */
+  background-color: #4CAF50; /* Warna hijau */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Membuat bentuk pil */
+  padding: 12px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan agar terangkat */
+
+  /* Tampilan Konten di Dalam Tombol */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Jarak antara ikon dan teks */
+  transition: all 0.3s ease;
+}
+
+.music-button:hover {
+  transform: translateY(-50%) scale(1.05); /* Sedikit membesar saat disentuh */
+  background-color: #45a049;
+}
