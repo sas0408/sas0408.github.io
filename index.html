@@ -92,6 +92,13 @@
         </div>
     </div>
 
+    <div id="custom-popup" class="popup-container">
+        <div class="popup-content">
+            <span id="close-popup" class="popup-close-btn">&times;</span>
+            <p><strong>Tips:</strong> Jangan lupa putar musiknya untuk pengalaman terbaik! 🎵</p>
+        </div>
+    </div>
+
 
     <script>
         // --- Skrip untuk Tombol "Tidak" yang Bergerak ---
@@ -115,13 +122,11 @@
         tombolMusik.addEventListener('click', () => {
             if (laguUtama.paused) {
                 laguUtama.play();
-                // Uncomment baris di bawah jika Anda menggunakan suara suasana
-                // suaraSuasana.play(); 
+                // suaraSuasana.play(); // Uncomment jika pakai suara suasana
                 tombolMusik.innerHTML = '⏸️ Jeda Musik';
             } else {
                 laguUtama.pause();
-                // Uncomment baris di bawah jika Anda menggunakan suara suasana
-                // suaraSuasana.pause();
+                // suaraSuasana.pause(); // Uncomment jika pakai suara suasana
                 tombolMusik.innerHTML = '🎵 Putar Musik Pengiring';
             }
         });
@@ -134,8 +139,7 @@
         const tombolTolak = document.getElementById('no-button');
         const tombolWaTerima = document.getElementById('tombol-wa-terima');
         const tombolWaTolak = document.getElementById('tombol-wa-tolak');
-
-        const nomorWaAnda = '6281210815825'; // Pastikan ini nomor Anda yang benar
+        const nomorWaAnda = '6281210815825';
 
         function hentikanSemuaMusik() {
             laguUtama.pause();
@@ -146,6 +150,7 @@
 
         tombolTerima.addEventListener('click', () => {
             hentikanSemuaMusik();
+            tombolMusik.style.display = 'none';
             kontenUtama.style.display = 'none';
             halamanDiterima.style.display = 'flex';
             laguDiterima.play();
@@ -153,6 +158,7 @@
 
         tombolTolak.addEventListener('click', () => {
             hentikanSemuaMusik();
+            tombolMusik.style.display = 'none';
             kontenUtama.style.display = 'none';
             halamanDitolak.style.display = 'flex';
             laguDitolak.play();
@@ -166,26 +172,15 @@
             window.location.href = `https://wa.me/${nomorWaAnda}?text=Hai%2C%20aku%20udah%20liat%20websitenya.`;
         });
 
-        <div id="custom-popup" class="popup-container">
-        <div class="popup-content">
-            <span id="close-popup" class="popup-close-btn">&times;</span>
-            <p><strong>Tips:</strong> Jangan lupa putar musiknya untuk pengalaman terbaik! 🎵</p>
-        </div>
-    </div>
+        // --- Skrip BARU untuk Notifikasi Pop-up ---
+        const popup = document.getElementById('custom-popup');
+        const closeBtn = document.getElementById('close-popup');
 
-
-    <script>
-        // ... (seluruh kode JavaScript Anda yang sudah ada) ...
-</body>
-</html>
+        function showPopup() { popup.style.display = 'block'; }
+        function hidePopup() { popup.style.display = 'none'; }
+        setTimeout(showPopup, 5000);
+        closeBtn.addEventListener('click', hidePopup);
     </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
