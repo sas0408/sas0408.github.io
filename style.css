@@ -259,3 +259,43 @@ h1, h2, h3, .love-declaration {
     transform: scale(1.05); /* Efek zoom saat dihover */
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
+
+/* Style untuk Notifikasi Pop-up */
+.popup-container {
+    display: none; /* Awalnya disembunyikan */
+    position: fixed;
+    bottom: 20px; /* Muncul di kanan bawah */
+    right: 20px;
+    z-index: 2000; /* Tampil di atas segalanya */
+    animation: fadeIn 0.5s;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #d18a8a; /* Aksen warna pink */
+    max-width: 300px;
+    position: relative;
+}
+
+.popup-content p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.popup-close-btn:hover {
+    color: #333;
+}
