@@ -11,68 +11,78 @@
 </head>
 <body>
 
-    <audio id="lagu-cinta" loop src="musik.mp3"></audio>
-
     <div class="music-player-bar">
         <button id="tombol-musik" class="button yes-button">🎵 Putar Musik Pengiring</button>
     </div>
 
+    <audio id="lagu-cinta" loop src="musik.mp3"></audio>
+    <audio id="suara-suasana" loop src="suasana.mp3"></audio>
+    <audio id="lagu-diterima" loop src="lagu_diterima.mp3"></audio>
+    <audio id="lagu-ditolak" loop src="lagu_ditolak.mp3"></audio>
 
-    <div class="container">
-        <header class="hero">
-            <h1>Untuk Nazwa Alya Maharani</h1>
-            <p class="subtitle">Sebuah pesan yang tak cukup terucap oleh kata</p>
-        </header>
+    <div id="konten-utama">
+        <div class="container">
+            <header class="hero">
+                <h1>Untuk Nazwa Alya Maharani</h1>
+                <p class="subtitle">Sebuah pesan yang tak cukup terucap oleh kata</p>
+            </header>
 
-        <section class="content-section story">
-            <h2>Sedikit Cerita...</h2>
-            <p>Mungkin kata-kata tidak akan pernah cukup, jadi aku mencoba merangkainya di sini. Ada sesuatu yang ingin aku sampaikan, sesuatu yang telah lama kusimpan. Ini adalah sedikit cerita tentang bagaimana kamu membawa warna baru dalam hidupku.</p>
-        </section>
+            <section class="content-section story">
+                <h2>Sedikit Cerita...</h2>
+                <p>Mungkin kata-kata tidak akan pernah cukup, jadi aku mencoba merangkainya di sini. Ada sesuatu yang ingin aku sampaikan, sesuatu yang telah lama kusimpan. Ini adalah sedikit cerita tentang bagaimana kamu membawa warna baru dalam hidupku.</p>
+            </section>
 
-        <section class="content-section reasons">
-            <h2>Kenapa Kamu Begitu Istimewa</h2>
-            <div class="reason-item">
-                <h3>Senyummu</h3>
-                <p>Caramu tersenyum, sederhana namun bisa mengubah hari yang paling kelabu menjadi lebih cerah.</p>
-            </div>
-            <div class="reason-item">
-                <h3>Kebaikan Hatimu</h3>
-                <p>Caramu memperlakukan orang lain dengan tulus dan penuh empati. Kebaikanmu adalah hal yang paling mengagumkan.</p>
-            </div>
-            <div class="reason-item">
-                <h3>Caramu Berpikir</h3>
-                <p>Aku suka mendengarkan ceritamu, caramu melihat dunia. Kamu cerdas, lucu, dan selalu membuatku terinspirasi.</p>
-            </div>
-             <div class="reason-item">
-                <h3>Rasa Nyaman</h3>
-                <p>Di dekatmu, aku merasa bisa menjadi diriku sendiri. Semua terasa tenang dan benar.</p>
-            </div>
-        </section>
-        
-        <section class="content-section message">
-            <h2>Apa yang Ingin Aku Sampaikan...</h2>
-            <p>Nazwa, seiring berjalannya waktu, aku sadar perasaanku lebih dari sekadar kagum. Aku menemukan kebahagiaan dalam setiap momen kecil yang kita bagi, dan aku menemukan diriku berharap untuk bisa menciptakan lebih banyak kenangan bersamamu. </p>
-            <p class="love-declaration">Aku menyayangimu, dan aku mencintaimu.</p>
-            <p>Jadi, maukah kamu memberiku kesempatan?</p>
-        </section>
+            <section class="content-section reasons">
+                <h2>Kenapa Kamu Begitu Istimewa</h2>
+                <div class="reason-item"><h3>Senyummu</h3><p>Caramu tersenyum, sederhana namun bisa mengubah hari yang paling kelabu menjadi lebih cerah.</p></div>
+                <div class="reason-item"><h3>Kebaikan Hatimu</h3><p>Caramu memperlakukan orang lain dengan tulus dan penuh empati. Kebaikanmu adalah hal yang paling mengagumkan.</p></div>
+                <div class="reason-item"><h3>Caramu Berpikir</h3><p>Aku suka mendengarkan ceritamu, caramu melihat dunia. Kamu cerdas, lucu, dan selalu membuatku terinspirasi.</p></div>
+                <div class="reason-item"><h3>Rasa Nyaman</h3><p>Di dekatmu, aku merasa bisa menjadi diriku sendiri. Semua terasa tenang dan benar.</p></div>
+            </section>
+            
+            <section class="content-section message">
+                <h2>Apa yang Ingin Aku Sampaikan...</h2>
+                <p>Nazwa, seiring berjalannya waktu, aku sadar perasaanku lebih dari sekadar kagum. Aku menemukan kebahagiaan dalam setiap momen kecil yang kita bagi, dan aku menemukan diriku berharap untuk bisa menciptakan lebih banyak kenangan bersamamu. </p>
+                <p class="love-declaration">Aku menyayangimu, dan aku mencintaimu.</p>
+                <p>Jadi, maukah kamu memberiku kesempatan?</p>
+            </section>
 
-        <section class="content-section choices">
-            <a href="diterima.html" class="button yes-button">Tentu Saja, Aku Mau! 😊</a>
-            <a href="ditolak.html" id="no-button" class="button no-button">Maaf, sepertinya tidak...</a>
-        </section>
+            <section class="content-section choices">
+                <button id="tombol-terima" class="button yes-button">Tentu Saja, Aku Mau! 😊</button>
+                <button id="no-button" class="button no-button">Maaf, sepertinya tidak...</button>
+            </section>
 
-        <footer class="footer">
-            <p>Apapun jawabanmu nanti, terima kasih telah menjadi bagian penting dalam perjalananku. Kamu adalah seseorang yang luar biasa.</p>
-            <p class="signature">Dari seseorang yang tulus mengagumimu,</p>
-            <p class="your-name">(Sultan Ali Shiddiq)</p>
-        </footer>
+            <footer class="footer">
+                <p>Apapun jawabanmu nanti, terima kasih telah menjadi bagian penting dalam perjalananku. Kamu adalah seseorang yang luar biasa.</p>
+                <p class="signature">Dari seseorang yang tulus mengagumimu,</p>
+                <p class="your-name">(Sultan Ali Shiddiq)</p>
+            </footer>
+        </div>
+    </div>
+
+    <div id="halaman-diterima" class="halaman-hasil">
+        <div class="container result-page">
+            <h1 class="yay">Yeayyy!!! 🥳</h1>
+            <p>Kamu nggak tahu betapa bahagianya aku sekarang.</p>
+            <img src="https://media1.tenor.com/m/u8f9-9v8pUYAAAAC/archie.gif" alt="Archie Happy GIF" style="max-width: 250px; margin: 30px auto; display: block; border-radius: 10px;">
+            <p style="margin-top: 30px; font-size: 1.2em;">Boleh kirim pesan ini biar aku tahu? 😊</p>
+            <button id="tombol-wa-terima" class="button yes-button" style="margin-top: 20px;">Kirim Konfirmasi via WhatsApp 💬</button>
+        </div>
+    </div>
+
+    <div id="halaman-ditolak" class="halaman-hasil">
+        <div class="container result-page">
+            <h1 class="calm-heading">Tidak Apa-Apa, Aku Mengerti</h1>
+            <p>Terima kasih banyak sudah jujur dan meluangkan waktu untuk melihat ini.</p>
+            <img src="https://media.tenor.com/Kok3E16VYikAAAAi/smile-smiling.gif" alt="Smile GIF" style="max-width: 250px; margin: 30px auto; display: block; border-radius: 10px;">
+            <button id="tombol-wa-tolak" class="button no-button" style="margin-top: 20px;">Kirim Pesan 💬</button>
+        </div>
     </div>
 
 
     <script>
         // --- Skrip untuk Tombol "Tidak" yang Bergerak ---
         const noButton = document.getElementById('no-button');
-
         noButton.addEventListener('mouseover', () => {
             const maxWidth = window.innerWidth - noButton.clientWidth;
             const maxHeight = window.innerHeight - noButton.clientHeight;
@@ -83,24 +93,66 @@
             noButton.style.top = randomY + 'px';
         });
 
-        
         // --- Skrip untuk Tombol Musik ---
-        const lagu = document.getElementById('lagu-cinta');
+        const laguUtama = document.getElementById('lagu-cinta');
+        const suaraSuasana = document.getElementById('suara-suasana');
+        const laguDiterima = document.getElementById('lagu-diterima');
+        const laguDitolak = document.getElementById('lagu-ditolak');
         const tombolMusik = document.getElementById('tombol-musik');
-
         tombolMusik.addEventListener('click', () => {
-            if (lagu.paused) {
-                lagu.play();
+            if (laguUtama.paused) {
+                laguUtama.play();
+                // Uncomment baris di bawah jika Anda menggunakan suara suasana
+                // suaraSuasana.play(); 
                 tombolMusik.innerHTML = '⏸️ Jeda Musik';
             } else {
-                lagu.pause();
+                laguUtama.pause();
+                // Uncomment baris di bawah jika Anda menggunakan suara suasana
+                // suaraSuasana.pause();
                 tombolMusik.innerHTML = '🎵 Putar Musik Pengiring';
             }
+        });
+
+        // --- Skrip untuk menampilkan hasil DENGAN pergantian musik ---
+        const kontenUtama = document.getElementById('konten-utama');
+        const halamanDiterima = document.getElementById('halaman-diterima');
+        const halamanDitolak = document.getElementById('halaman-ditolak');
+        const tombolTerima = document.getElementById('tombol-terima');
+        const tombolTolak = document.getElementById('no-button');
+        const tombolWaTerima = document.getElementById('tombol-wa-terima');
+        const tombolWaTolak = document.getElementById('tombol-wa-tolak');
+
+        const nomorWaAnda = '6281210815825'; // Pastikan ini nomor Anda yang benar
+
+        function hentikanSemuaMusik() {
+            laguUtama.pause();
+            suaraSuasana.pause();
+            laguDiterima.pause();
+            laguDitolak.pause();
+        }
+
+        tombolTerima.addEventListener('click', () => {
+            hentikanSemuaMusik();
+            kontenUtama.style.display = 'none';
+            halamanDiterima.style.display = 'flex';
+            laguDiterima.play();
+        });
+
+        tombolTolak.addEventListener('click', () => {
+            hentikanSemuaMusik();
+            kontenUtama.style.display = 'none';
+            halamanDitolak.style.display = 'flex';
+            laguDitolak.play();
+        });
+        
+        tombolWaTerima.addEventListener('click', () => {
+            window.location.href = `https://wa.me/${nomorWaAnda}?text=Haii%2C%20aku%20udah%20liat%20websitenya...%20dan%20jawabannya%20iyaa%20%F0%9F%98%8A`;
+        });
+
+        tombolWaTolak.addEventListener('click', () => {
+            window.location.href = `https://wa.me/${nomorWaAnda}?text=Hai%2C%20aku%20udah%20liat%20websitenya.`;
         });
     </script>
 
 </body>
 </html>
-
-
-
