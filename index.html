@@ -99,17 +99,6 @@
 
 
     <script>
-        // --- Skrip untuk Tombol "Tidak" yang Bergerak ---
-        const noButton = document.getElementById('no-button');
-        noButton.addEventListener('mouseover', () => {
-            const maxWidth = window.innerWidth - noButton.clientWidth;
-            const maxHeight = window.innerHeight - noButton.clientHeight;
-            const randomX = Math.floor(Math.random() * maxWidth);
-            const randomY = Math.floor(Math.random() * maxHeight);
-            noButton.style.position = 'absolute';
-            noButton.style.left = randomX + 'px';
-            noButton.style.top = randomY + 'px';
-        });
 
         // --- Skrip untuk Tombol Musik ---
         const laguUtama = document.getElementById('lagu-cinta');
@@ -182,6 +171,7 @@
 
 </body>
 </html>
+
 
 
 
